@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMBERWOK — a night-market wok stall</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background: #120a20;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Verdana', sans-serif;
+  }
+  #game {
+    display: block;
+    width: min(1280px, 100vw);
+    height: auto;
+    aspect-ratio: 1280 / 720;
+    background: #171233;
+    /* Keep the picture crisp when the browser scales the canvas down. */
+    image-rendering: auto;
+    box-shadow: 0 0 60px rgba(255, 140, 40, 0.25), 0 0 0 1px rgba(255, 209, 102, 0.2);
+  }
+  noscript {
+    color: #ffe8b3;
+    text-align: center;
+    padding: 2em;
+  }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720"></canvas>
+<noscript>EMBERWOK needs JavaScript to run the wok stall.</noscript>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
